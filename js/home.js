@@ -100,7 +100,7 @@ var blogPostHtml = ""
 		+"<div class='blogPreview%=ifTop'>"
 		+	"<div class='blogPreview-meta'>"
         +           "<div class='blogPreview-title h4'>%=title"
-        +                   "<span class='blogPreview-author'>Peter Andringa | %=date %=month %=year </span>"
+        +                   "<span class='blogPreview-author'>%=author | %=date %=month %=year </span>"
         +           "</div>"
         +   " </div><br>"
         +   "<div class='blogPreview-post'>"
@@ -119,65 +119,39 @@ else
 /* ----------------------- CONTROLLER ----------------------- */
 var randomStuff;
 var loadAsync = function(){
-	//var url =  "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q="+encodeURIComponent('http://medium.com/feed/@p_andringa');
-	var url = "https://medium.com/feed/@p_andringa";
-	$.get( url, function( data ) {
-		var $xml = $(data);
-		var html = "";
-		var MONTHS = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-		var first = true;
-		$xml.find("item").each(function() {
-			var $this = $(this);
-			var item = {
-				title: $this.find("title").text(),
-				link: $this.find("link").text(),
-				description: $this.find("description").text(),
-				date: $this.find("pubDate").text(),
-				author: $this.find("author").text(),
-				description: $this.find("description").text()
-			}
-			var d = new Date(item.date);
-			html += blogPostHtml.replaceMultiple({
-				url: item.link,
-				ifTop: (first) ? " post-top" : "",
-				date: d.getDate(),
-				month: MONTHS[d.getMonth()],
-				year: d.getFullYear(),
-				title: item.title,
-				description: item.description
-			});
-			if(first) first=false;
-		});
-		$('#fillPosts').html(html);
-		$('#fillPosts').css('display', 'block');
-		$('#loadingText').css('display', 'none');
-	});
-	/*$.get(('http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=' + encodeURIComponent('http://medium.com/feed/@p_andringa')),
-		function(data, status) {
-			console.log("Done");
-			
+	var url =  "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q="+encodeURIComponent('https://medium.com/feed/@p_andringa');
+	$.ajax({
+	    type: 'GET',
+	    url: url,
+	    async: true,
+	    jsonpCallback: 'jsonCallback',
+	    contentType: "application/json",
+	    dataType: 'jsonp',
+	    success: function(json) {
+			var posts = json.responseData.feed.entries;
 			var MONTHS = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-			var posts = $.parseJSON(data).responseData.feed.entries;
-			console.log("posts", posts)
 			var html = "";
 			for(var i=0; i<posts.length; i++){
-				var d = new Date(posts[i].date);
+				var d = new Date(posts[i].publishedDate);
 				html += blogPostHtml.replaceMultiple({
 					url: posts[i].link,
 					ifTop: (i==0) ? " post-top" : "",
+					author: posts[i].author,
 					date: d.getDate(),
 					month: MONTHS[d.getMonth()],
 					year: d.getFullYear(),
 					title: posts[i].title,
-					description: posts[i].description
+					description: posts[i].contentSnippet
 				});
 			}
-		
-			document.getElementById('fillPosts').innerHTML = html;
-			document.getElementById('fillPosts').style.display = 'block';
-			document.getElementById('loadingText').style.display = 'none';
-			
-		});*/
+			$('#fillPosts').html(html);
+			$('#fillPosts').css('display', 'block');
+			$('#loadingText').css('display', 'none');
+	    },
+	    error: function(e) {
+			console.error(e.message);
+	    }
+	});
 }
 
 

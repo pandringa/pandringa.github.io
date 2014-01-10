@@ -380,7 +380,7 @@ section .sectionTitle {
 /* Blog Section */
 /* line 279, ../sass/screen.scss */
 #blog {
-  padding-bottom: 25px;
+  padding-bottom: 125px;
   min-height: 100%;
 }
 /* line 282, ../sass/screen.scss */
@@ -729,11 +729,11 @@ section .sectionTitle {
   margin-top: 0px;
   text-align: center;
   min-height: 150px;
-  background-color: #425C81;
+  background-color: #CCC;
 }
 /* line 548, ../sass/screen.scss */
 #footer #footerContainer {
-  background-color: #CCC;
+  background: none;
   width: 88%;
   margin: auto;
   margin-top: 0px;
