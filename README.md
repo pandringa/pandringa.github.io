@@ -1,6 +1,17 @@
-Andringa
-========
+#Andrin.ga
 
-Source for my website
+Source for my website (http://andrin.ga). It was previously hosted on my personal Node.js server, but I stripped it down to static HTML, and now host it on GitHub pages.
 
-P.S. - Shoutout to the guys at SocialTables (Especially Jake, Lawrence, Matt, Edward, and Oz) for teaching me all the stuff thats made this possible. If you're reading this, thanks guys!
+#Main file structure: 
+
+**index.html**: Main homepage
+
+**all.min.css**: CSS libraries, compiled using yuicompressor.jar (from the CLI)
+
+**screen.css**: Main CSS file, compiled from the sass in sass/screen.scss
+
+**all.min.js**: JS libraries, compiled using yuicompressor.jar (from the CLI)
+
+**home.js** Main JS file, powering the homepage.
+
+
