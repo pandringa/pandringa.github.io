@@ -1,0 +1,66 @@
+.socialIcons{
+	background-image: url('../img/social.svg');
+    width: 60px;
+	height: 62px;
+	display: inline-block;
+	margin: 0px 5px;
+}
+#Twitter{
+	background-position: 0px 0px;
+}
+#Twitter:hover{
+	background-position: 0px -200px !important;
+}
+
+#Facebook{
+	background-position: -79px 0px;
+}
+#Facebook:hover{
+	background-position: -79px -200px !important;
+}
+
+#Github{
+	background-position: -237px 0px;
+}
+#Github:hover{
+	background-position: -237px -200px !important;
+}
+
+#GooglePlus{
+	background-position: -158px -81px;
+}
+#GooglePlus:hover{
+	background-position: -158px -279px !important;
+}
+
+#Blog{
+	background-position: -79px -81px;
+}
+#Blog:hover{
+	background-position: -79px -279px !important;
+}
+
+#Dropbox{
+	background-position: -474px -81px;
+}
+#Dropbox:hover{
+	background-position: -474px -279px !important;
+}
+
+#Medium{
+	background-image: url(../img/medium-black.png);
+	background-repeat: no-repeat;
+}
+#Medium:hover{
+	background-image: url(../img/medium-color.png);
+	background-repeat: no-repeat;
+}
+/* Hack to make all fit in line, b/c of Chrome's SVG shift */
+#Medium-chrome{
+	background-image: url(../img/medium-black.png);
+	background-repeat: no-repeat;
+	top: -3px;
+}
+#Medium-chrome:hover{
+	background-image: url(../img/medium-color.png);
+}
