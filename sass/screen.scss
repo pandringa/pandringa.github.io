@@ -38,7 +38,7 @@ body{
 /* General Rules for Sections */
 section{
 	min-height: 110vh;
-	padding-top: 50px;
+	padding-top: 25px;
 	text-align: center;
 	padding-left: 12%;
 	padding-right: 12%;
@@ -401,6 +401,7 @@ section{
 	opacity: 0.0;
 	margin-left: 15px;
 	margin-top: 5px;
+	font-family: $header;
 	@include respond-to(mobile){
 		display: none;
 	}

@@ -155,15 +155,6 @@ var loadAsync = function(){
 }
 
 
-var equalHeights = function(elements){ //TODO make this work
-	var h = 0;
-	elements.each(function(){
-		if($(this).height() > h)
-			h = this.height;
-	});
-	elements.css('height', h);
-}
-
 //Scrolling animations
 var scrollDuration = 2000;
 $(function(){
@@ -176,8 +167,6 @@ $(function(){
 	$('#toTop').localScroll({duration:scrollDuration});
 	$('#scrollDown').localScroll({duration:scrollDuration/3});
 	
-	equalHeights($('.projectPanel'));
-
 	$('#fixedNav i').hover(
 		function(){
 			$(this).removeClass('fa-circle-o'); $(this).addClass('fa-dot-circle-o');
@@ -199,6 +188,13 @@ $(function(){
 	$('.mobileMenu-links').click(function(){
 		closeJPushMenu();
 	});
+
+	if(window.location.hash.length > 0){
+		document.getElementById('scrollDown').style.display = "none";
+		$('#fixedNav').css('display', '').transition({'opacity': '1.0'}, 2000);
+		$('#toTop').css('display', '').transition({'opacity': '1.0'}, 2000);
+		$('#mobileNav').css('display', '').transition({'opacity': '1.0'}, 2000);
+	} 
 });
 
 function changeLocation(section){
@@ -221,7 +217,6 @@ function changeLocation(section){
 		}, 500);
 		setTimeout(function(){
 			$("#scrollDown").css('display', 'none');
-			 console.log("removing scroll");
 		}, 1000);
 	} else if(currLocation != 'head' && section.name == 'head'){
 		$("#scrollDown").css('display', '').transition({'opacity': '0.7'}, 1000);
