@@ -47,7 +47,7 @@ section{
 		padding: 60px;
 		padding-top: 10%;
 		padding-bottom: 10%;
-		min-height: 120vh;
+		min-height: 100vh;
 	}
 	.sectionTitle{
 		margin-bottom: 30px;
@@ -69,7 +69,7 @@ section{
 	width: 100%;
 	clear: both;
 	@include respond-to(mobile){
-		height: 120vh;
+		height: 100vh;
 	}
 	.centered{
 		width: 500px;

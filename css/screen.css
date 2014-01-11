@@ -132,7 +132,7 @@ section {
     padding: 60px;
     padding-top: 10%;
     padding-bottom: 10%;
-    min-height: 120vh;
+    min-height: 100vh;
   }
 }
 /* line 52, ../sass/screen.scss */
@@ -161,7 +161,7 @@ section .sectionTitle {
 @media only screen and (max-width: 640px) {
   /* line 63, ../sass/screen.scss */
   #head {
-    height: 120vh;
+    height: 100vh;
   }
 }
 /* line 74, ../sass/screen.scss */
