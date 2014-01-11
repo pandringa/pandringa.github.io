@@ -2,7 +2,7 @@
 
 Source for my website (http://andrin.ga). It was previously hosted on my personal Node.js server, but I stripped it down to static HTML, and now host it on GitHub pages.
 
-##Main file structure: 
+##Summary of contents: 
 
 **index.html**: Main page
 
