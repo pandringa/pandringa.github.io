@@ -2,16 +2,18 @@
 
 Source for my website (http://andrin.ga). It was previously hosted on my personal Node.js server, but I stripped it down to static HTML, and now host it on GitHub pages.
 
-##Main file structure: 
+##Summary of contents: 
 
-**index.html**: Main homepage
-
-**all.min.css**: CSS libraries, compiled using yuicompressor.jar (from the CLI)
+**index.html**: Main page
 
 **screen.css**: Main CSS file, compiled from the sass in sass/screen.scss
 
-**all.min.js**: JS libraries, compiled using yuicompressor.jar (from the CLI)
+**all.min.css**: All the CSS files (both libraries and my code) compiled and minified
 
 **home.js**: Main JS file, powering the homepage.
+
+**all.min.js**: All the JS files compiled and minified
+
+
 
 
