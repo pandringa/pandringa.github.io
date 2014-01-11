@@ -83,7 +83,7 @@ section{
 	width: 100%;
 	clear: both;
 	@include respond-to(mobile){
-		height: 130%;
+		height: 130vh;
 	}
 	.centered{
 		width: 500px;

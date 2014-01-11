@@ -143,7 +143,7 @@ section .sectionTitle {
 @media only screen and (max-width: 640px) {
   /* line 77, ../sass/screen.scss */
   #head {
-    height: 130%;
+    height: 130vh;
   }
 }
 /* line 88, ../sass/screen.scss */
