@@ -235,6 +235,9 @@ function changeLocation(section){
 		}, 1000);
 	}
 
+	$("#i-"+section.name).removeClass('fa-circle-o'); $("#i-"+section.name).addClass('fa-dot-circle-o');
+	$("#i-"+currLocation).removeClass('fa-dot-circle-o'); $("#i-"+currLocation).addClass('fa-circle-o');
+
 	currLocation = section.name;
 	if(section.color != null)
 		$('#background').transition({'background': section.color});

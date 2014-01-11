@@ -1,17 +1,26 @@
-@import url(http://fonts.googleapis.com/css?family=Muli);
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-@import url(http://fonts.googleapis.com/css?family=Snippet);
-@import url(http://fonts.googleapis.com/css?family=Lustria);
-
 @font-face {
-    font-family: 'monr';
-    src: url('../fonts/montserratt/montserrat-regular-webfont.eot');
-    src: url('../fonts/montserratt/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/montserratt/montserrat-regular-webfont.woff') format('woff'),
-         url('../fonts/montserratt/montserrat-regular-webfont.ttf') format('truetype'),
-         url('../fonts/montserratt/montserrat-regular-webfont.svg#montserratregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+  font-family: 'Snippet';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Snippet'), url(http://themes.googleusercontent.com/static/fonts/snippet/v4/fAP-E0beNC7crLbNRC9S7QLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
 }
 
 /* Force SVG on webkit browsers (Chrome on Windows font fix) */
@@ -30,6 +39,8 @@ $blue: #0099CC;
 $size: 1.5rem;
 
 body{
+    font-family: $body;
+    font-weight: 300;
     font-size: 150%;
 }
 #background{
@@ -40,5 +51,20 @@ body{
         font-size: 3rem;
         line-height: 4rem;
         $size: 3rem;
+    }
+}
+h2{
+    font-family: $header;
+    font-weight: normal;
+    color: black;
+    font-size: 30px;
+}
+a{
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    @include transition(color 0.2s);
+    &:hover{
+        color: #D6EDFF;
     }
 }

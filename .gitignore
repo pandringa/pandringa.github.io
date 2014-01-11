@@ -3,4 +3,4 @@ node_modules
 app.js
 .sass-cache
 config
-yuicompressor.jar
+compiler.jar
