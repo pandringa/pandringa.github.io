@@ -94,8 +94,8 @@ section{
 		}
 		.logo{
 			font-family: $header;
-			font-weight: normal;
-			color: black;
+			font-weight: $headerWeight;
+			color: #313131;
 			font-size: 60px;
 			margin-bottom: 25px;
 			text-decoration: none;
@@ -106,21 +106,21 @@ section{
 				font-size: 80px;
 			}
 			&:hover{
-				color: #ACACAC;
-				text-shadow:0 1px 0 rgba(255,255,255,0.8);
+				color: #000000;
 			}
 		}
 		.bio{
 			font-size: 1.75rem;
 			color: #212121;
-			font-family: $body;
+			font-family: $header;
+			font-weight: $bodyWeight;
 			@include respond-to(mobile){
 				font-size: 2.5rem;
 			}
 		}
 		#nav{
 			font-family: $header;
-			font-weight: normal;
+			font-weight: $headerWeight;
 			color: black;
 			font-size: 2.5rem;
 			color: black;
@@ -132,13 +132,13 @@ section{
 				font-size: 3rem;
 			}
 			a{
-				color: black;
+				color: #414141;
 				text-decoration: none;
+				font-weight: $headerWeight;
 				@include transition(color 0.2s);
 				&:hover{
 					text-decoration: none;
-					color: #ACACAC;
-					text-shadow:0 1px 0 rgba(255,255,255,0.8);
+					color: #000000;
 				}
 			}
 		}
@@ -286,7 +286,6 @@ section{
 		border-bottom: 1px solid black;
 		padding-top: 10px;
 		padding-bottom: 10px;
-		font-weight: 300;
 		position: relative;
 		//top: -1000px;
 		//opacity: 0.0;
@@ -294,7 +293,6 @@ section{
 			max-width: 100%
 		}
 		.blogPreview-link{
-			font-weight: 300;
 			&:hover{
 				text-decoration: none;
 				color: black;
@@ -312,7 +310,8 @@ section{
 				float: left;
 				font-size: 40px;
 				text-align: left;
-				font-weight: 300;
+				font-family: $header;
+				font-weight: $headerWeight;
 				width: 100%;
 				@include transition(color .1s);
 				&:hover {

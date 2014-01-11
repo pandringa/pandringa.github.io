@@ -1,46 +1,56 @@
+/* RALEWAY FONT */
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Raleway';
   font-style: normal;
-  font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+  font-weight: 200;
+  src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url(http://themes.googleusercontent.com/static/fonts/raleway/v7/8KhZd3VQBtXTAznvKjw-k73hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
 }
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+  src: local('Raleway'), url(http://themes.googleusercontent.com/static/fonts/raleway/v7/cIFypx4yrWPDz3zOxk7hIQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
 }
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(http://themes.googleusercontent.com/static/fonts/raleway/v7/JbtMzqLaYbbbCL9X6EvaI73hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
 }
+
+/*DROID SERIF FONT*/
 @font-face {
-  font-family: 'Snippet';
+  font-family: 'Droid Serif';
   font-style: normal;
   font-weight: 400;
-  src: local('Snippet'), url(http://themes.googleusercontent.com/static/fonts/snippet/v4/fAP-E0beNC7crLbNRC9S7QLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+  src: local('Droid Serif'), local('DroidSerif'), url(http://themes.googleusercontent.com/static/fonts/droidserif/v4/0AKsP294HTD-nvJgucYTaLrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidserif/v4/QQt14e8dY39u-eYBZmppwRbnBKKEOwRKgsHDreGcocg.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url(http://themes.googleusercontent.com/static/fonts/droidserif/v4/cj2hUnSRBhwmSPr9kS5894o3ZslTYfJv0R05CazkwN8.woff) format('woff');
 }
 
-/* Force SVG on webkit browsers (Chrome on Windows font fix) */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    @font-face {
-        font-family: 'monr';
-        src: url('../fonts/montserratt/montserrat-regular-webfont.svg#montserratregular') format('svg');
-    }
-}
 
-$montr: 'monr', sans-serif;
-$montb: 'monb', sans-serif;
-$body: 'Lato', sans-serif;
-$header: 'Snippet', sans-serif;
+
+$body: 'Droid Serif', serif;
+$bodyWeight: 400;
+$header: 'Raleway', sans-serif;
+$headerWeight: 200;
+
 $blue: #0099CC;
 $size: 1.5rem;
 
 body{
     font-family: $body;
-    font-weight: 300;
+    font-weight: $bodyWeight;
     font-size: 150%;
 }
 #background{
@@ -53,15 +63,16 @@ body{
         $size: 3rem;
     }
 }
-h2{
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: $header;
-    font-weight: normal;
+    font-weight: $headerWeight;
     color: black;
-    font-size: 30px;
+    line-height: 1.1;
+    color: black;
 }
 a{
     text-decoration: none;
-    font-weight: 500;
+    font-weight: $bodyWeight;
     color: black;
     @include transition(color 0.2s);
     &:hover{
