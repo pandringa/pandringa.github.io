@@ -1,78 +1,866 @@
-/*
-Syntax error: File to import not found or unreadable: noncompile.
-              Load paths:
-                /Users/Peter/Documents/Projects/Andrin.ga/sass
-                /Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/frameworks/blueprint/stylesheets
-                /Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/frameworks/compass/stylesheets
-                Compass::SpriteImporter
-        on line 2 of /Users/Peter/Documents/Projects/Andrin.ga/sass/screen.scss
+@import url(http://fonts.googleapis.com/css?family=Muli);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Snippet);
+@import url(http://fonts.googleapis.com/css?family=Lustria);
+@font-face {
+  font-family: 'monr';
+  src: url("../fonts/montserratt/montserrat-regular-webfont.eot");
+  src: url("../fonts/montserratt/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserratt/montserrat-regular-webfont.woff") format("woff"), url("../fonts/montserratt/montserrat-regular-webfont.ttf") format("truetype"), url("../fonts/montserratt/montserrat-regular-webfont.svg#montserratregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-1: /Users/Peter/Documents/Projects/Andrin.ga/sass/screen.scss
+/* Force SVG on webkit browsers (Chrome on Windows font fix) */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'monr';
+    src: url("../fonts/montserratt/montserrat-regular-webfont.svg#montserratregular") format("svg");
+}
+}
+/* line 32, ../sass/_typography.scss */
+body {
+  font-size: 150%;
+}
 
-Backtrace:
-/Users/Peter/Documents/Projects/Andrin.ga/sass/screen.scss:2
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/import_node.rb:45:in `import'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/tree/root_node.rb:20:in `render'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/engine.rb:315:in `_render'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/lib/sass/engine.rb:262:in `render'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/fssm-0.2.10/lib/fssm/path.rb:35:in `update'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/fssm-0.2.10/lib/fssm/state/directory.rb:39:in `block in modified'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `each'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `modified'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/fssm-0.2.10/lib/fssm/state/directory.rb:18:in `refresh'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `each'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block in run'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `loop'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `run'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/bin/compass:44:in `call'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/bin/compass:19:in `load'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/bin/compass:19:in `<main>'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/bin/ruby_noexec_wrapper:14:in `eval'
-/Users/Peter/.rvm/gems/ruby-1.9.3-p448/bin/ruby_noexec_wrapper:14:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: noncompile.\A               Load paths:\A                 /Users/Peter/Documents/Projects/Andrin.ga/sass\A                 /Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/frameworks/blueprint/stylesheets\A                 /Users/Peter/.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/frameworks/compass/stylesheets\A                 Compass::SpriteImporter\A         on line 2 of /Users/Peter/Documents/Projects/Andrin.ga/sass/screen.scss\A \A 1: /Users/Peter/Documents/Projects/Andrin.ga/sass/screen.scss"; }
+/* line 35, ../sass/_typography.scss */
+#background {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+}
+@media only screen and (max-width: 640px) {
+  /* line 35, ../sass/_typography.scss */
+  #background {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+
+/* General Rules */
+/* line 6, ../sass/screen.scss */
+html {
+  height: 100%;
+}
+
+/* line 9, ../sass/screen.scss */
+body {
+  margin: 0px;
+  padding: 0px;
+  position: static;
+  height: 100%;
+}
+
+/* line 15, ../sass/screen.scss */
+.cbp-spmenu-push {
+  position: static;
+}
+
+/* line 18, ../sass/screen.scss */
+h2 {
+  font-family: "Snippet", sans-serif;
+  font-weight: normal;
+  color: black;
+  font-size: 30px;
+}
+
+/* line 24, ../sass/screen.scss */
+a {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+}
+/* line 29, ../sass/screen.scss */
+a:hover {
+  color: #D6EDFF;
+}
+
+/* line 33, ../sass/screen.scss */
+.greet {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin: 5px;
+  margin-left: 0px;
+}
+
+/* Background */
+/* line 41, ../sass/screen.scss */
+#background {
+  /*
+  background-image: url(../img/backgrounds/ticks.png);
+  background-repeat: repeat;
+  */
+  background-color: #425C81;
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+/* General Rules for Sections */
+/* line 53, ../sass/screen.scss */
+section {
+  min-height: 120%;
+  padding-top: 5%;
+  text-align: center;
+  padding-left: 12%;
+  padding-right: 12%;
+}
+@media only screen and (max-width: 640px) {
+  /* line 53, ../sass/screen.scss */
+  section {
+    width: 100%;
+    padding: 60px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    min-height: 130%;
+  }
+}
+/* line 66, ../sass/screen.scss */
+section .sectionTitle {
+  margin-bottom: 30px;
+  font-size: 6rem;
+}
+@media only screen and (max-width: 640px) {
+  /* line 66, ../sass/screen.scss */
+  section .sectionTitle {
+    font-size: 8rem;
+  }
+}
+
+/* Header Section */
+/* line 77, ../sass/screen.scss */
+#head {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  clear: both;
+}
+@media only screen and (max-width: 640px) {
+  /* line 77, ../sass/screen.scss */
+  #head {
+    height: 130vh;
+  }
+}
+/* line 88, ../sass/screen.scss */
+#head .centered {
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+@media only screen and (max-width: 640px) {
+  /* line 88, ../sass/screen.scss */
+  #head .centered {
+    width: 100%;
+  }
+}
+/* line 101, ../sass/screen.scss */
+#head .centered .logo {
+  font-family: "Snippet", sans-serif;
+  font-weight: normal;
+  color: black;
+  font-size: 60px;
+  margin-bottom: 25px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+@media only screen and (max-width: 640px) {
+  /* line 101, ../sass/screen.scss */
+  #head .centered .logo {
+    font-size: 80px;
+  }
+}
+/* line 114, ../sass/screen.scss */
+#head .centered .logo:hover {
+  color: #ACACAC;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+/* line 119, ../sass/screen.scss */
+#head .centered .bio {
+  font-size: 1.75rem;
+  color: #212121;
+  font-family: "Lato", sans-serif;
+}
+@media only screen and (max-width: 640px) {
+  /* line 119, ../sass/screen.scss */
+  #head .centered .bio {
+    font-size: 2.5rem;
+  }
+}
+/* line 127, ../sass/screen.scss */
+#head .centered #nav {
+  font-family: "Snippet", sans-serif;
+  font-weight: normal;
+  color: black;
+  font-size: 2.5rem;
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+@media only screen and (max-width: 640px) {
+  /* line 127, ../sass/screen.scss */
+  #head .centered #nav {
+    font-size: 3rem;
+  }
+}
+/* line 140, ../sass/screen.scss */
+#head .centered #nav a {
+  color: black;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+}
+/* line 144, ../sass/screen.scss */
+#head .centered #nav a:hover {
+  text-decoration: none;
+  color: #ACACAC;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* About Section */
+/* line 156, ../sass/screen.scss */
+#about {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+/* line 159, ../sass/screen.scss */
+#about #aboutImage {
+  opacity: 0.0;
+}
+/* line 165, ../sass/screen.scss */
+#about #aboutImage .caption {
+  font-style: italic;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+/* line 172, ../sass/screen.scss */
+#about #aboutText {
+  text-align: left;
+  margin: auto;
+  max-width: 900px;
+}
+
+/* Resume Section */
+/* line 183, ../sass/screen.scss */
+#resume .resumeSection {
+  max-width: 600px;
+  width: 70%;
+  display: block;
+  margin: auto;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 640px) {
+  /* line 183, ../sass/screen.scss */
+  #resume .resumeSection {
+    width: 90%;
+  }
+}
+/* line 193, ../sass/screen.scss */
+#resume .resumeSection ul {
+  text-align: left;
+}
+/* line 196, ../sass/screen.scss */
+#resume .resumeSection .description {
+  color: #535353;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  display: block;
+}
+@media only screen and (max-width: 640px) {
+  /* line 196, ../sass/screen.scss */
+  #resume .resumeSection .description {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  /* line 205, ../sass/screen.scss */
+  #resume .resumeSection .section-head {
+    font-size: 4rem;
+  }
+}
+/* line 211, ../sass/screen.scss */
+#resume .resumeSection.top {
+  margin-top: 60px;
+}
+
+/* Project Section */
+@media only screen and (max-width: 640px) {
+  /* line 218, ../sass/screen.scss */
+  #projects {
+    z-index: 25;
+  }
+}
+/* line 222, ../sass/screen.scss */
+#projects .row {
+  /*
+  .projectPanel-left {
+  	left: -1500px;
+  }
+  .projectPanel-right {
+  	left: 1500px;
+  	@include respond-to(mobile){
+  		left: -1500px;
+  	}
+  }
+  .projectPanel-left-center {
+  	left: -1500px;
+  }
+  .projectPanel-right-center {
+  	left: 1500px;
+  	@include respond-to(mobile){
+  		left: -1500px;
+  	}
+  }
+  */
+}
+/* line 223, ../sass/screen.scss */
+#projects .row .projectPanel {
+  position: relative;
+}
+@media only screen and (max-width: 640px) {
+  /* line 223, ../sass/screen.scss */
+  #projects .row .projectPanel {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    z-index: 25;
+  }
+}
+/* line 231, ../sass/screen.scss */
+#projects .row .projectPanel .thumbnail {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  overflow: none;
+}
+/* line 238, ../sass/screen.scss */
+#projects .row .projectPanel .thumbnail .projectThumb {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 242, ../sass/screen.scss */
+#projects .row .projectPanel .thumbnail .caption .buttonP {
+  text-align: center;
+}
+/* line 244, ../sass/screen.scss */
+#projects .row .projectPanel .thumbnail .caption .buttonP a {
+  text-align: center;
+}
+@media only screen and (max-width: 640px) {
+  /* line 244, ../sass/screen.scss */
+  #projects .row .projectPanel .thumbnail .caption .buttonP a {
+    width: 90%;
+    margin: auto;
+    font-size: 2rem;
+  }
+}
+
+/* Blog Section */
+/* line 279, ../sass/screen.scss */
+#blog {
+  padding-bottom: 125px;
+  min-height: 100%;
+}
+/* line 282, ../sass/screen.scss */
+#blog #fillPosts {
+  display: none;
+}
+/* line 285, ../sass/screen.scss */
+#blog .blogPreview {
+  max-width: 70%;
+  display: block;
+  margin: auto;
+  border-bottom: 1px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 300;
+  position: relative;
+}
+@media only screen and (max-width: 640px) {
+  /* line 285, ../sass/screen.scss */
+  #blog .blogPreview {
+    max-width: 100%;
+  }
+}
+/* line 299, ../sass/screen.scss */
+#blog .blogPreview .blogPreview-link {
+  font-weight: 300;
+}
+/* line 301, ../sass/screen.scss */
+#blog .blogPreview .blogPreview-link:hover {
+  text-decoration: none;
+  color: black;
+}
+/* line 306, ../sass/screen.scss */
+#blog .blogPreview .blogPreview-meta {
+  display: block;
+  clear: both;
+  margin-bottom: 20px;
+  line-height: 50px;
+  width: 100%;
+  vertical-align: bottom;
+}
+/* line 313, ../sass/screen.scss */
+#blog .blogPreview .blogPreview-meta .blogPreview-title {
+  display: inline-block;
+  float: left;
+  font-size: 40px;
+  text-align: left;
+  font-weight: 300;
+  width: 100%;
+  -webkit-transition: color 0.1s;
+  -moz-transition: color 0.1s;
+  -o-transition: color 0.1s;
+  transition: color 0.1s;
+}
+/* line 321, ../sass/screen.scss */
+#blog .blogPreview .blogPreview-meta .blogPreview-title:hover {
+  color: #0099CC;
+}
+/* line 324, ../sass/screen.scss */
+#blog .blogPreview .blogPreview-meta .blogPreview-title .blogPreview-author {
+  display: inline-block;
+  float: right;
+  position: relative;
+  top: 15px;
+  color: #777;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.5rem;
+  vertical-align: bottom;
+}
+/* line 337, ../sass/screen.scss */
+#blog .blogPreview .blogPreview-post {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-top: 5px;
+  font-weight: 300;
+}
+/* line 343, ../sass/screen.scss */
+#blog .blogPreview .blogPreview-post .blogPreview-continue {
+  color: #555;
+}
+/* line 348, ../sass/screen.scss */
+#blog .post-top {
+  border-top: 1px solid black;
+}
+/* line 351, ../sass/screen.scss */
+#blog #viewMore {
+  display: block;
+  margin: auto;
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: 300;
+  opacity: 0.0;
+  -webkit-transition: color 0.1;
+  -moz-transition: color 0.1;
+  -o-transition: color 0.1;
+  transition: color 0.1;
+}
+@media only screen and (max-width: 640px) {
+  /* line 351, ../sass/screen.scss */
+  #blog #viewMore {
+    font-size: 4rem;
+  }
+}
+/* line 362, ../sass/screen.scss */
+#blog #viewMore:hover {
+  text-decoration: none;
+  color: #0099CC;
+}
+/* line 367, ../sass/screen.scss */
+#blog .sectionTitle + a:first-child {
+  border-top: 1px solid black;
+}
+
+/* Contact Section */
+/* line 373, ../sass/screen.scss */
+#contact {
+  min-height: 100px;
+  padding-bottom: 0%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #313131;
+  color: white;
+}
+/* line 380, ../sass/screen.scss */
+#contact a {
+  color: white;
+}
+/* line 383, ../sass/screen.scss */
+#contact #contact-button {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  max-width: 800px;
+}
+@media only screen and (max-width: 640px) {
+  /* line 383, ../sass/screen.scss */
+  #contact #contact-button {
+    font-size: 4rem;
+  }
+}
+/* line 392, ../sass/screen.scss */
+#contact #contactText {
+  display: block;
+  margin: auto;
+}
+
+/* Fixed Navigation in corner */
+/* line 400, ../sass/screen.scss */
+#fixedNav {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.0;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+@media only screen and (max-width: 640px) {
+  /* line 400, ../sass/screen.scss */
+  #fixedNav {
+    display: none;
+  }
+}
+/* line 411, ../sass/screen.scss */
+#fixedNav #fixedList {
+  padding-left: 0px;
+}
+/* line 413, ../sass/screen.scss */
+#fixedNav #fixedList li {
+  margin-left: 5px;
+  list-style-type: none;
+}
+/* line 417, ../sass/screen.scss */
+#fixedNav #fixedList a {
+  text-decoration: none;
+}
+/* line 419, ../sass/screen.scss */
+#fixedNav #fixedList a:hover {
+  color: black;
+}
+/* line 423, ../sass/screen.scss */
+#fixedNav #fixedList i {
+  margin-right: 5px;
+  color: #313131;
+}
+/* line 426, ../sass/screen.scss */
+#fixedNav #fixedList i:hover {
+  color: black;
+}
+/* line 430, ../sass/screen.scss */
+#fixedNav #fixedList span {
+  display: none;
+  color: black;
+}
+
+/* line 436, ../sass/screen.scss */
+#mobileNav {
+  display: none;
+  opacity: 0.0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  z-index: 1000;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+@media only screen and (max-width: 640px) {
+  /* line 436, ../sass/screen.scss */
+  #mobileNav {
+    display: block;
+  }
+}
+/* line 448, ../sass/screen.scss */
+#mobileNav ul {
+  background-color: #313131;
+  margin-left: 0px;
+  padding-left: 0px;
+  opacity: 1.0;
+}
+/* line 453, ../sass/screen.scss */
+#mobileNav ul li {
+  list-style: none;
+  text-align: center;
+}
+/* line 456, ../sass/screen.scss */
+#mobileNav ul li a {
+  color: white;
+  display: block;
+  opacity: 1.0;
+}
+/* line 460, ../sass/screen.scss */
+#mobileNav ul li a:hover {
+  color: #D6EDFF;
+}
+/* line 466, ../sass/screen.scss */
+#mobileNav:hover {
+  opacity: 1.0;
+}
+
+/* line 470, ../sass/screen.scss */
+#toTop {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  line-height: 40px;
+  margin: 10px;
+  text-align: center;
+  -webkit-transition: color 0.1s;
+  -moz-transition: color 0.1s;
+  -o-transition: color 0.1s;
+  transition: color 0.1s;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  opacity: 0.0;
+}
+@media only screen and (max-width: 640px) {
+  /* line 470, ../sass/screen.scss */
+  #toTop {
+    display: none;
+  }
+}
+/* line 488, ../sass/screen.scss */
+#toTop a:hover {
+  color: #313131;
+  text-decoration: none;
+}
+/* line 493, ../sass/screen.scss */
+#toTop i {
+  display: inline;
+  line-height: 40px;
+  color: #313131;
+  opacity: 0.5;
+  font-size: 30px;
+}
+/* line 500, ../sass/screen.scss */
+#toTop:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* line 505, ../sass/screen.scss */
+#scrollDown {
+  position: fixed;
+  bottom: 10px;
+  text-decoration: none;
+  text-align: center;
+  width: 80%;
+  margin: 0 0 0 -40%;
+  left: 50%;
+  -webkit-transition: opacity 0.1s;
+  -moz-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+  opacity: 0.5;
+}
+@media only screen and (max-width: 640px) {
+  /* line 505, ../sass/screen.scss */
+  #scrollDown {
+    display: none;
+  }
+}
+/* line 519, ../sass/screen.scss */
+#scrollDown a:hover {
+  text-decoration: none;
+}
+/* line 523, ../sass/screen.scss */
+#scrollDown i {
+  display: inline;
+  color: #888;
+  -webkit-transition: opacity 0.1s;
+  -moz-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+  -webkit-transition: color 0.1s;
+  -moz-transition: color 0.1s;
+  -o-transition: color 0.1s;
+  transition: color 0.1s;
+}
+/* line 528, ../sass/screen.scss */
+#scrollDown i:hover {
+  color: #FFF;
+}
+/* line 532, ../sass/screen.scss */
+#scrollDown:hover {
+  opacity: 0.9;
+}
+
+/*Footer Section*/
+/* line 538, ../sass/screen.scss */
+#footer {
+  padding: 15px;
+  padding-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  margin-top: 0px;
+  text-align: center;
+  min-height: 150px;
+  background-color: #CCC;
+}
+/* line 548, ../sass/screen.scss */
+#footer #footerContainer {
+  background: none;
+  width: 88%;
+  margin: auto;
+  margin-top: 0px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  /*box-shadow: 0px 5px 5px #222;*/
+}
+/* line 556, ../sass/screen.scss */
+#footer #footerContainer #social {
+  float: left;
+  margin-left: 11%;
+  top: -5px;
+  display: block;
+  height: 60px;
+  clear: both;
+  /* Hack to make all fit in line, b/c of Chrome's SVG shift */
+}
+/* line 1, ../sass/_socialButtons.scss */
+#footer #footerContainer #social .socialIcons {
+  background-image: url("../img/social.svg");
+  width: 60px;
+  height: 62px;
+  display: inline-block;
+  margin: 0px 5px;
+}
+/* line 8, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #Twitter {
+  background-position: 0px 0px;
+}
+/* line 11, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #Twitter:hover {
+  background-position: 0px -200px !important;
+}
+/* line 15, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #Facebook {
+  background-position: -79px 0px;
+}
+/* line 18, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #Facebook:hover {
+  background-position: -79px -200px !important;
+}
+/* line 22, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #Github {
+  background-position: -237px 0px;
+}
+/* line 25, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #Github:hover {
+  background-position: -237px -200px !important;
+}
+/* line 29, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #GooglePlus {
+  background-position: -158px -81px;
+}
+/* line 32, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #GooglePlus:hover {
+  background-position: -158px -279px !important;
+}
+/* line 36, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #Blog {
+  background-position: -79px -81px;
+}
+/* line 39, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #Blog:hover {
+  background-position: -79px -279px !important;
+}
+/* line 43, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #Dropbox {
+  background-position: -474px -81px;
+}
+/* line 46, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #Dropbox:hover {
+  background-position: -474px -279px !important;
+}
+/* line 50, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #Medium {
+  background-image: url(../img/medium-black.png);
+  background-repeat: no-repeat;
+}
+/* line 54, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #Medium:hover {
+  background-image: url(../img/medium-color.png);
+  background-repeat: no-repeat;
+}
+/* line 59, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #Medium-chrome {
+  background-image: url(../img/medium-black.png);
+  background-repeat: no-repeat;
+  top: -3px;
+}
+/* line 64, ../sass/_socialButtons.scss */
+#footer #footerContainer #social #Medium-chrome:hover {
+  background-image: url(../img/medium-color.png);
+}
+@media only screen and (max-width: 640px) {
+  /* line 556, ../sass/screen.scss */
+  #footer #footerContainer #social {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+/* line 571, ../sass/screen.scss */
+#footer #footerContainer #footerText {
+  margin-right: 11%;
+  display: block;
+  text-align: right;
+}
+@media only screen and (max-width: 640px) {
+  /* line 571, ../sass/screen.scss */
+  #footer #footerContainer #footerText {
+    clear: both;
+    margin-top: 2px;
+    text-align: center;
+    width: 100%;
+  }
+}
+/* line 581, ../sass/screen.scss */
+#footer #footerContainer #footerText .footerContent {
+  display: inline;
+  text-align: right;
+}
+@media only screen and (max-width: 640px) {
+  /* line 581, ../sass/screen.scss */
+  #footer #footerContainer #footerText .footerContent {
+    clear: both;
+    margin-top: 2px;
+    text-align: center;
+    width: 100%;
+  }
+}
