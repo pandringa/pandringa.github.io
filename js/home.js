@@ -221,7 +221,7 @@ function changeLocation(section){
 		}, 500);
 		setTimeout(function(){
 			$("#scrollDown").css('display', 'none');
-			console.log("removing scroll");
+			 console.log("removing scroll");
 		}, 1000);
 	} else if(currLocation != 'head' && section.name == 'head'){
 		$("#scrollDown").css('display', '').transition({'opacity': '0.7'}, 1000);
@@ -239,8 +239,8 @@ function changeLocation(section){
 	$("#i-"+currLocation).removeClass('fa-dot-circle-o'); $("#i-"+currLocation).addClass('fa-circle-o');
 
 	currLocation = section.name;
-	if(section.color != null)
-		$('#background').transition({'background': section.color});
+	//if(section.color != null)
+	//	$('#background').transition({'background': section.color});
 
 	setTimeout(section.enter, 200);
 	setTimeout(calculateTops, 500);

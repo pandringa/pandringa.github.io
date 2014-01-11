@@ -37,17 +37,18 @@ body{
 
 /* General Rules for Sections */
 section{
-	min-height: 100vh;
-	padding-top: 5%;
+	min-height: 110vh;
+	padding-top: 50px;
 	text-align: center;
 	padding-left: 12%;
 	padding-right: 12%;
+	padding-bottom: 150px;
 	@include respond-to(mobile) {
 		width: 100%;
 		padding: 60px;
 		padding-top: 10%;
 		padding-bottom: 10%;
-		min-height: 100vh;
+		min-height: 110vh;
 	}
 	.sectionTitle{
 		margin-bottom: 30px;
@@ -60,6 +61,11 @@ section{
 
 
 /* Header Section */
+#headerContainer{
+	padding-left: 75px;
+	padding-top: 25px;
+	padding-right: 75px;
+}
 #head{
 	display: block;
 	position: relative;
@@ -68,6 +74,8 @@ section{
 	height: 90vh;
 	width: 100%;
 	clear: both;
+	padding: 0px;
+	background-color: #A9A9A9;
 	@include respond-to(mobile){
 		height: 90vh;
 	}
@@ -142,6 +150,7 @@ section{
 #about{
 	padding-left: 60px;
 	padding-right: 60px;
+	background-color: #5EA032;
 	#aboutImage{
 		opacity: 0.0;
 		@include respond-to(mobile){
@@ -166,12 +175,13 @@ section{
 
 /* Resume Section */
 #resume{
+	background-color: #D59859;
 	.resumeSection{
 		max-width: 600px;
 		width: 70%;
 		display: block;
 		margin: auto;
-		margin-bottom: 40px;
+		padding-bottom: 40px;
 		@include respond-to(mobile){
 			width: 90%
 		}
@@ -202,6 +212,7 @@ section{
 
 /* Project Section */
 #projects{
+	background-color: #923C97;
 	@include respond-to(mobile){
 		z-index: 25;
 	}
@@ -264,6 +275,7 @@ section{
 /* Blog Section */
 #blog{
 	padding-bottom: 125px;
+	background-color: #FFF;
 	#fillPosts{
 		display: none;
 	}
@@ -495,6 +507,7 @@ section{
 	width:80%;
     margin: 0 0 0 -40%;
     left:50%;
+    z-index: 3;
 	@include transition(opacity .1s);
 	opacity: 0.5;
 	@include respond-to(mobile){
@@ -507,71 +520,65 @@ section{
 	}
 	i{
 		display: inline;
-		color: #888;
+		color: #313131;
+		z-index: 3;
 		@include transition(opacity .1s);
 		@include transition(color .1s);
 		&:hover{
-			color: #FFF;
 		}
 	}
 	&:hover{
-		opacity: 0.9;
+		opacity: 0.8;
 	}
 }
 
+#footerContainer{
+	padding-bottom: 25px;
+	padding-left: 75px;
+	padding-right: 75px;
+}
 /*Footer Section*/
 #footer{
 	padding: 15px;
-	padding-top: 0px;
+	padding-top: 30px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 60px;
-	margin-top: 0px;
 	text-align: center;
 	min-height: 130px;
-	background-color: #CCC;
-	#footerContainer{
-		background: none;
-		width: 95%;
-		margin: auto;
-		margin-top: 0px;
-		padding-top: 15px;
-		padding-bottom: 20px;
-		/*box-shadow: 0px 5px 5px #222;*/
-		#social{
-			float: left;
-			margin-left: 11%;
-			top: -5px;
-			display: block;
-			height: 60px;
-			clear: both;
-			
-			@import "socialButtons";
-			@include respond-to(mobile){
-				width: 70%;
-				margin-left: 15%;
-				margin-right: 15%;
-			}
+	background-color: #A9A9A9;
+	#social{
+		float: left;
+		margin-left: 11%;
+		top: -5px;
+		display: block;
+		height: 60px;
+		clear: both;
+		
+		@import "socialButtons";
+		@include respond-to(mobile){
+			width: 70%;
+			margin-left: 15%;
+			margin-right: 15%;
 		}
-		#footerText{
-			margin-right: 11%;
-			display: block;
+	}
+	#footerText{
+		margin-right: 11%;
+		display: block;
+		text-align: right;
+		@include respond-to(mobile){
+			clear: both;
+			margin-top: 2px;
+			text-align: center;
+			width: 100%;
+		}
+		.footerContent{
+			display: inline;
 			text-align: right;
 			@include respond-to(mobile){
 				clear: both;
 				margin-top: 2px;
 				text-align: center;
 				width: 100%;
-			}
-			.footerContent{
-				display: inline;
-				text-align: right;
-				@include respond-to(mobile){
-					clear: both;
-					margin-top: 2px;
-					text-align: center;
-					width: 100%;
-				}
 			}
 		}
 	}
