@@ -1387,63 +1387,71 @@ section .sectionTitle {
 #footer #social #Twitter:hover {
   background-position: 0px -200px !important;
 }
-/* line 15, ../sass/_socialButtons.scss */
+/* line 14, ../sass/_socialButtons.scss */
+#footer #social #Linkedin {
+  background-position: -316px -81px;
+}
+/* line 17, ../sass/_socialButtons.scss */
+#footer #social #Linkedin:hover {
+  background-position: -316px -279px !important;
+}
+/* line 20, ../sass/_socialButtons.scss */
 #footer #social #Facebook {
   background-position: -79px 0px;
 }
-/* line 18, ../sass/_socialButtons.scss */
+/* line 23, ../sass/_socialButtons.scss */
 #footer #social #Facebook:hover {
   background-position: -79px -200px !important;
 }
-/* line 22, ../sass/_socialButtons.scss */
+/* line 27, ../sass/_socialButtons.scss */
 #footer #social #Github {
   background-position: -237px 0px;
 }
-/* line 25, ../sass/_socialButtons.scss */
+/* line 30, ../sass/_socialButtons.scss */
 #footer #social #Github:hover {
   background-position: -237px -200px !important;
 }
-/* line 29, ../sass/_socialButtons.scss */
+/* line 34, ../sass/_socialButtons.scss */
 #footer #social #GooglePlus {
   background-position: -158px -81px;
 }
-/* line 32, ../sass/_socialButtons.scss */
+/* line 37, ../sass/_socialButtons.scss */
 #footer #social #GooglePlus:hover {
   background-position: -158px -279px !important;
 }
-/* line 36, ../sass/_socialButtons.scss */
+/* line 41, ../sass/_socialButtons.scss */
 #footer #social #Blog {
   background-position: -79px -81px;
 }
-/* line 39, ../sass/_socialButtons.scss */
+/* line 44, ../sass/_socialButtons.scss */
 #footer #social #Blog:hover {
   background-position: -79px -279px !important;
 }
-/* line 43, ../sass/_socialButtons.scss */
+/* line 48, ../sass/_socialButtons.scss */
 #footer #social #Dropbox {
   background-position: -474px -81px;
 }
-/* line 46, ../sass/_socialButtons.scss */
+/* line 51, ../sass/_socialButtons.scss */
 #footer #social #Dropbox:hover {
   background-position: -474px -279px !important;
 }
-/* line 50, ../sass/_socialButtons.scss */
+/* line 55, ../sass/_socialButtons.scss */
 #footer #social #Medium {
   background-image: url(../img/medium-black.png);
   background-repeat: no-repeat;
 }
-/* line 54, ../sass/_socialButtons.scss */
+/* line 59, ../sass/_socialButtons.scss */
 #footer #social #Medium:hover {
   background-image: url(../img/medium-color.png);
   background-repeat: no-repeat;
 }
-/* line 59, ../sass/_socialButtons.scss */
+/* line 64, ../sass/_socialButtons.scss */
 #footer #social #Medium-chrome {
   background-image: url(../img/medium-black.png);
   background-repeat: no-repeat;
   top: -3px;
 }
-/* line 64, ../sass/_socialButtons.scss */
+/* line 69, ../sass/_socialButtons.scss */
 #footer #social #Medium-chrome:hover {
   background-image: url(../img/medium-color.png);
 }
